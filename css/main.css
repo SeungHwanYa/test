@@ -1,0 +1,355 @@
+.secCon > section {
+  border: 1px solid blue;
+  padding: var(--gap-big);
+}
+.secCon .sec1 {
+  padding-top: calc(var(--gap-big) * 2);
+}
+.secCon > section > div {
+  border: 1px solid red;
+}
+
+.sec1 > div {
+  background-color: var(--point1);
+  border-radius: var(--gap-small);
+  padding: var(--gap-big);
+  padding-bottom: calc(var(--gap-big) * 2.25);
+  position: relative;
+  overflow: hidden;
+}
+.sec1 h2 {
+  /* 기본 폰트 사이즈를 10px로 지정하고 rem사용 */
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--gray1);
+}
+.sec1 .desc {
+  padding: var(--gap-small) 0;
+  display: flex;
+  position: relative;
+}
+.sec1 .desc::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  background-color: var(--gray2);
+  left: 110px;
+  top: 50%;
+  transform: translateY(calc(-50% - 5px));
+}
+.sec1 .desc p {
+  padding-right: var(--gap-small);
+}
+.sec1 .desc p > * {
+  display: block;
+}
+.sec1 .desc strong {
+  font-size: 2.5rem;
+}
+.sec1 .desc span {
+  line-height: 4;
+}
+.sec1 .inputBox {
+  background-color: var(--white);
+  width: 50%;
+  padding: var(--gap-ss);
+  border-radius: var(--gap-ss);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.sec1 .inputBox input,
+.sec1 .inputBox button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.sec1 .inputBox input {
+  width: 80%;
+}
+.sec1 .visual {
+  position: absolute;
+  right: var(--gap-small);
+  bottom: 0;
+  background-color: var(--gray1);
+  width: 300px;
+  height: 300px;
+  border-radius: 45%;
+  border-bottom-right-radius: 0;
+}
+.sec1 .visual img {
+  position: absolute;
+  width: 110%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sec1 .visual::before,
+.sec1 .visual::after {
+  content: "";
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sec1 .visual::before {
+  width: 80px;
+  height: 130px;
+  top: -90px;
+  right: -30px;
+  background-image: url(../img/sec1_arrow1.svg);
+}
+.sec1 .visual::after {
+  left: -130px;
+  bottom: 50px;
+  background-image: url(../img/sec1_arrow2.svg);
+}
+
+@media (max-width: 680px) {
+  .mw {
+    width: calc(100% - calc(var--gap-small));
+  }
+  .sec1 > div {
+    padding: var(--gap-small);
+    padding-bottom: calc(var(--gap-big) * 6);
+  }
+  .sec1 .inputBox {
+    width: 100%;
+  }
+  .sec1 .visual {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.sec2 > div {
+  display: flex;
+  gap: var(--gap-small);
+}
+.sec2 .heading {
+  width: 20%;
+  max-width: 250px;
+}
+.sec2 .heading p {
+  width: 60%;
+  line-height: 1.6rem;
+  padding: var(--gap-small) 0;
+}
+.sec2 .swiperCon {
+  width: 80%;
+  max-width: 100%;
+  position: relative;
+}
+.sec2 .slide1 {
+  width: 100%;
+  height: 100%;
+}
+.sec2 .next1,
+.sec2 .prev1,
+.sec4 .next2,
+.sec4 .prev2 {
+  color: var(--point2);
+}
+.sec2 .next1,
+.sec4 .next2 {
+  right: -25px;
+}
+.sec2 .prev1,
+.sec4 .prev2 {
+  left: -25px;
+}
+.sec2 .next1::after,
+.sec2 .prev1::after,
+.sec4 .next2::after,
+.sec4 .prev2::after {
+  font-size: 2rem;
+}
+.sec2 .slideImg,
+.sec4 .slideImg {
+  border-radius: var(--gap-ss);
+  overflow: hidden;
+  height: 80%;
+}
+.sec2 img,
+.sec4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sec2 .desc,
+.sec4 .desc {
+  font-size: 0.8em;
+  padding: var(--gap-ss);
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .sec2 > div {
+    flex-wrap: wrap;
+  }
+  .sec2 > div > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.sec3 > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap-small);
+  text-align: center;
+}
+
+.sec3 > div > h2,
+.sec3 > div > p {
+  width: 100%;
+}
+.sec3 .list {
+  width: calc(100% / 3 - var(--gap-small) * 0.685);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec3 .listImg {
+  padding: var(--gap-small);
+  background-color: var(--point1);
+  border-radius: 50%;
+}
+.sec3 .listImg img {
+  width: 30px;
+}
+.sec3 .list h3 {
+  font-weight: bold;
+  line-height: 2;
+  color: var(--gray1);
+}
+.sec3 .list p {
+  color: var(--gray3);
+  font-size: 0.9em;
+}
+@media (max-width: 680px) {
+  .sec3 .list {
+    width: 100%;
+  }
+}
+.sec4 {
+  position: relative;
+  padding-bottom: calc(var(--gap-big) * 2) !important;
+  overflow: hidden;
+}
+.sec4::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background-color: var(--point1);
+  z-index: -1;
+  top: 14em;
+}
+.sec4 h2,
+.sec4 > div > p {
+  text-align: center;
+}
+.sec4 .swiperCon {
+  position: relative;
+}
+.sec4 .slide2 {
+  width: 100%;
+  padding: var(--gap-big) 0;
+}
+.sec4 .swiper-slide {
+  height: auto;
+}
+.sec4 .swiper-slide:nth-of-type(2n) {
+  top: var(--gap-big);
+}
+.sec4 .more {
+  opacity: 0;
+  transition: 0.3s;
+}
+.sec4 .swiper-slide-active .more {
+  opacity: 1;
+}
+@media (max-width: 680px) {
+  .sec4 {
+    padding-bottom: var(--gap-big) !important;
+  }
+  .sec4 .swiper-slide:nth-of-type(2n) {
+    top: 0;
+  }
+}
+.sec5 > div {
+  position: relative;
+}
+.sec5 h2 {
+  margin-bottom: var(--gap-big);
+}
+.sec5 .slide3 {
+  overflow: visible;
+}
+.sec5 .swiper-slide {
+  width: 70%;
+  background-color: var(--point1);
+  border-radius: var(--gap-ss);
+  padding: var(--gap-small);
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sec5 .member {
+  position: relative;
+  width: 25%;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+}
+.sec5 .member img {
+  max-width: 100%;
+  width: auto;
+}
+.sec5 .member p {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+}
+.sec5 .member p span {
+  display: block;
+  white-space: nowrap;
+}
+.sec5 .swiper-slide .desc {
+  width: 100%;
+}
+.sec5 .pg1 {
+  width: auto;
+  bottom: auto;
+  top: var(--gap-ss);
+  right: 0;
+  left: auto;
+}
+.sec5 .pg1 span {
+  border-radius: var(--gap-ss);
+}
+.sec5 .swiper-pagination-bullet-active {
+  background-color: var(--point1);
+  width: 50px;
+}
+@media (max-width: 680px) {
+  .sec5 .swiper-slide {
+    width: 100%;
+  }
+  .sec5 .member {
+    width: 60%;
+  }
+
+  .sec5 .pg1 {
+    top: 80px;
+  }
+}
